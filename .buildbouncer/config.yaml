@@ -1,0 +1,26 @@
+version: 1
+meta:
+    template:
+        id: lua
+    inputs:
+        template.id: lua
+checks:
+    - id: template:lua:95a95b0232a9
+      source: template:lua
+      name: lint
+      run: luacheck .
+      shell: cmd
+      requires: luacheck
+    - id: template:lua:abf7ddc7dedd
+      source: template:lua
+      name: tests
+      run: busted
+      shell: cmd
+      requires: busted
+insults:
+    mode: snarky
+    file: .buildbouncer/assets/insults/default.json
+    locale: en
+banter:
+    file: .buildbouncer/assets/banter/default.json
+    locale: en
