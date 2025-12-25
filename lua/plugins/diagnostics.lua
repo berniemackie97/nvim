@@ -14,6 +14,7 @@ return {
         source = "if_many",
       })
       opts.diagnostics.severity_sort = true
+      return opts
     end,
   },
   {

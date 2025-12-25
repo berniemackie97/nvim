@@ -65,7 +65,7 @@ return {
     end,
   },
   {
-    "mason-org/mason.nvim",
+    "williamboman/mason.nvim",
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}
       add_unique(opts.ensure_installed, {

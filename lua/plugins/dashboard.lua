@@ -12,14 +12,16 @@ return {
     "nvimdev/dashboard-nvim",
     opts = function(_, opts)
       local logo = [[
-BBBBB  EEEEE  RRRR   N   N  III  EEEEE  V   V  III  M   M
-B   B  E      R   R  NN  N   I   E      V   V   I   MM MM
-BBBBB  EEEE   RRRR   N N N   I   EEEE   V   V   I   M M M
-B   B  E      R  R   N  NN   I   E       V V    I   M   M
-B   B  E      R   R  N   N   I   E        V     I   M   M
-BBBBB  EEEEE  R   R  N   N  III  EEEEE    V    III  M   M
+██████╗ ███████╗██████╗ ███╗   ██╗██╗███████╗██╗   ██╗██╗███╗   ███╗
+██╔══██╗██╔════╝██╔══██╗████╗  ██║██║██╔════╝██║   ██║██║████╗ ████║
+██████╔╝█████╗  ██████╔╝██╔██╗ ██║██║█████╗  ██║   ██║██║██╔████╔██║
+██╔══██╗██╔══╝  ██╔══██╗██║╚██╗██║██║██╔══╝  ╚██╗ ██╔╝██║██║╚██╔╝██║
+██████╔╝███████╗██║  ██║██║ ╚████║██║███████╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+           ⚡ SHIP FAST · LINT CLEAN · CODE LIKE A PRO ⚡
 ]]
-      logo = string.rep("\n", 6) .. logo .. "\n"
+      logo = string.rep("\n", 4) .. logo .. "\n"
 
       opts.config = opts.config or {}
       opts.config.header = vim.split(logo, "\n")
@@ -43,7 +45,6 @@ BBBBB  EEEEE  R   R  N   N  III  EEEEE    V    III  M   M
         elseif type(footer) == "string" then
           lines = { footer }
         end
-        table.insert(lines, 1, "BERNIEVIM // ship fast, lint clean")
         return lines
       end
 
